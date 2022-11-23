@@ -1,0 +1,46 @@
+.main {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__container {
+  width: 22vw;
+  height: 35vh;
+  background-color: rgb(141, 0, 105);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 #fff;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__container:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.doneButton {
+  background-color: rgb(141, 0, 105);
+  color: #fff;
+  border-top: 2px solid #fff;
+  text-decoration: overline;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: -2rem 0rem;
+  cursor: pointer;
+}

@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import Card from "../src/components/js/Card";
+import MainContent from "./components/js/MainContent";
+import TodoData from "./components/Data/data";
 function App() {
+  const [newTodoListData, setNewTodoListData] = useState(TodoData);
+  const onAddTodoListDatas = (newTodoDatas) => {
+    setNewTodoListData((prev) => {
+      return [newTodoDatas, ...prev];
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card AddTodoList={onAddTodoListDatas} />
+      <MainContent key={newTodoListData.id} UpdateTodoData={newTodoListData} />
+    </>
   );
 }
 
